@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 
 <head>
-    <link rel="stylesheet" href="CSS/main.css">
-    <script src="Scripts/main.js"></script>
+    <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <ng-scrollbar style="height: 300px;">
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -19,23 +20,44 @@
             <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
-    <ul class="inspiration">
-        <h2> <a href="https://onepagelove.com/inspiration/portfolio">Inspiration</a></h2>
-        <li> <a href="https://onepagelove.com/andrew-lindstrom">andrew-lindstrom</a></li>
-        <li> <a href="https://onepagelove.com/mike-mcalister">mike-mcalister</a></li>
-        <li> <a href="https://onepagelove.com/bhawinworx">bhawinworx</a></li>
-        <li> <a href="https://onepagelove.com/dodo">dodo</a></li>
-        <li> <a href="https://onepagelove.com/edip">edip</a></li>
-        <li> <a href="https://onepagelove.com/flowjam">flowjam</a></li>
-        <li> <a href="https://onepagelove.com/craig-hooper">craig-hooper</a></li>
-        <li> <a href="https://onepagelove.com/opendoor-design">opendoor-design</a></li>
+    <div class="inspiration" id="home">
+    <ul>
+        <h2><a href="https://onepagelove.com/inspiration/portfolio">Inspiration</a></h2>
+        <li><a href="https://onepagelove.com/andrew-lindstrom">andrew-lindstrom</a></li>
+        <li><a href="https://onepagelove.com/mike-mcalister">mike-mcalister</a></li>
+        <li><a href="https://onepagelove.com/bhawinworx">bhawinworx</a></li>
+        <li><a href="https://onepagelove.com/dodo">dodo</a></li>
+        <li><a href="https://onepagelove.com/edip">edip</a></li>
+        <li><a href="https://onepagelove.com/flowjam">flowjam</a></li>
+        <li><a href="https://onepagelove.com/craig-hooper">craig-hooper</a></li>
+        <li><a href="https://onepagelove.com/opendoor-design">opendoor-design</a></li>
     </ul>
-    <div class="projects">
-        <p class="arrow_left"><</p> 
-        <h1>Projects Go Here, they will auto slideshow, but arrows can advance forwards/backwards </h1>
-        <p class="arrow_right">></p>
+</div>
+    <div class="projects" id="projects">
+        <button class="arrow_left"><</button> 
+        <h1>Projects Go Here</h1>
+        <!--
+        they will auto slideshow, but arrows can advance forwards/backwards
+        
+        add this when you figure out the button thing
+        <h2>Apple Game, Stardew Valley Mods, CSCI45 Project </h2> 
+        -->
+        <button class="arrow_right">></button>
     </div>
+    <div class="resume" id="resume">
+        <button class="arrow_left"><</button>  
+        <h1>Resume Goes Here, possibly interactive in some way? </h1>
+        <button class="arrow_right">></button>
+    </div>
+    <div class="contact" id="contact">
+        <h1>Contact Me Goes Here </h1>
+        <h1 style="width: 50%; text-align: center;">maybe something simple just like information on how to 
+            reach me, but could also do something like an actual message 
+            box</h1>
+    </div>
+</ng-scrollbar>
+
+<script src="main.js"></script>
 
 </body>
-
 </html>
