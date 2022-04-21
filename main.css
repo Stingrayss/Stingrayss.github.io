@@ -94,6 +94,10 @@ button:hover {
     color: white;
 }
 
+img {
+    border-radius: 20px;
+}
+
 /*************
    Classes
 *************/
@@ -112,6 +116,38 @@ button:hover {
 }
 .inspiration > ul {
     text-align: center;
+}
+
+.about {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: space-around;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100vh;
+    width: 100%;
+}
+
+.about > img {
+    height: 50vh;
+    width: 35%;
+}
+
+.about_section {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 40%;
+    margin-top: -10em;
+}
+
+.about_section > p{
+    width: 70%;
 }
 
 .projects {
