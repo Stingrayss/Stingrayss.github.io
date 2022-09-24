@@ -7,27 +7,10 @@ I want to get rid of the track somehow, but I can't figure it out
 Maybe try doing the library again, not sure how to set that up though
 */
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track-piece {
-	background: black;
-    width: 0;
-}
-   
-::-webkit-scrollbar-thumb {
-    background: gray; 
-    border-radius: 2em;
-}
-  
-::-webkit-scrollbar-thumb:hover {
-    background: #505050; 
-}
-
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 nav {
