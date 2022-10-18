@@ -2,41 +2,10 @@
    Elements
 *************/
 
-/*
-I want to get rid of the track somehow, but I can't figure it out
-Maybe try doing the library again, not sure how to set that up though
-*/
-
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-}
-
-nav {
-    position: fixed;
-    display: flex;
-    width: 97vw;
-    z-index: 2;
-}
-
-nav > ul {
-    font-size: .75em;
-    display: flex;
-    justify-content: flex-end;
-    width: 100vw;
-    list-style-type: none;
-    color: black;
-    -webkit-text-stroke: 1px white;
-}
-
-nav > ul > li {
-    padding: 1em;
-    text-align: center;
-}
-
-ul > li {
-    list-style: none;
 }
 
 h1 {
@@ -130,40 +99,13 @@ img {
     margin-top: -10em;
 }
 
-.about_section > p{
+.about_section > p {
     width: 70%;
 }
 
 .projects {
     display: flex;
     background-image: url(../Images/valley.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    justify-content: space-between;
-    padding-left: 1em;
-    padding-right: 1em;
-    align-items: center;
-    height: 100vh;
-}
-
-.resume {
-    display: flex;
-    background-image: url(../Images/sunset.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    justify-content: space-between;
-    padding-left: 1em;
-    padding-right: 1em;
-    align-items: center;
-    height: 100vh;
-}
-
-.contact {
-    display: flex;
-    flex-flow: column nowrap;
-    background-image: url(../Images/coffee\ shop\ 2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

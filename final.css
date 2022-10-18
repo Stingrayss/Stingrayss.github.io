@@ -1,0 +1,40 @@
+/*************
+   Elements
+*************/
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background-image: -webkit-linear-gradient(rgb(20,20,20), rgb(40,40,40));
+    line-height: 50px;
+}
+
+
+/*************
+     IDs
+*************/
+
+#about-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#about-header {
+    color: white;
+}
+
+#about-text {
+    color: rgb(160, 160, 160);  
+}
+
+#about-text > p > a {
+    color: white;
+    text-decoration: none;
+}
+
+#about-text > p > a:hover {
+    color: purple;
+}
