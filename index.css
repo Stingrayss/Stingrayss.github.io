@@ -33,21 +33,8 @@ a:hover {
     color: red;
 }
 
-button {
-    background: none;
-    border: none;
-    font-size: 5em;
-    color: cyan;
-    -webkit-text-stroke: 2px black;
-}
-
-button:hover {
-    cursor: pointer;
-    color: white;
-}
-
-img {
-    border-radius: 20px;
+ul {
+    list-style: none;
 }
 
 /*************
@@ -55,63 +42,16 @@ img {
 *************/
 
 .inspiration {
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
-    background-image: url(../Images/space.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: -webkit-linear-gradient(rgb(20,20,20), rgb(40,40,40));
     height: 100vh;
+    text-align: center;
 }
 
 .inspiration > ul {
     text-align: center;
-}
-
-.about {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    background-color: gray;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    justify-content: space-around;
-    padding-left: 1em;
-    padding-right: 1em;
-    height: 100vh;
-    width: 100%;
-}
-
-.about > img {
-    height: 50vh;
-    width: 35%;
-}
-
-.about_section {
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-    width: 40%;
-    margin-top: -10em;
-}
-
-.about_section > p {
-    width: 70%;
-}
-
-.projects {
-    display: flex;
-    background-image: url(../Images/valley.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    justify-content: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    align-items: center;
-    height: 100vh;
 }

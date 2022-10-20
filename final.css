@@ -2,6 +2,10 @@
    Elements
 *************/
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -10,31 +14,47 @@ body {
     line-height: 50px;
 }
 
+/**********************
+     about-wrapper
+**********************/
 
-/*************
-     IDs
-*************/
+h2 {
+    font-size: 1.20em;
+}
+
+h2 > a {
+    color: white;
+}
+
+h2 > a:hover {
+    color: rgb(50, 150, 255);
+}
 
 #about-wrapper {
     display: flex;
     flex-flow: column nowrap;
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
+    margin-top: 7em;
 }
 
 #about-header {
     color: white;
+    font-size: 1.75em;
+    margin-bottom: -1em;
 }
 
 #about-text {
     color: rgb(160, 160, 160);  
 }
 
-#about-text > p > a {
-    color: white;
-    text-decoration: none;
+#about-icons {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-#about-text > p > a:hover {
-    color: purple;
+#about-icons > img {
+    width: 32px;
+    height: 32px;
+    padding-right: 1em;
 }
