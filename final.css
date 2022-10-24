@@ -3,14 +3,15 @@
 *************/
 
 html {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-    background-image: -webkit-linear-gradient(rgb(20,20,20), rgb(40,40,40));
+    background: linear-gradient(rgb(40, 40, 40) 30%, rgb(20, 20, 20)) no-repeat;
+    background-attachment: fixed;
     line-height: 50px;
 }
 
@@ -33,7 +34,7 @@ h2 > a:hover {
 #about-wrapper, #projects-wrapper {
     display: flex;
     flex-flow: column nowrap;
-    width: 75%;
+    width: 65%;
     margin: 0 auto;
     margin-top: 7em;
 }
@@ -45,7 +46,7 @@ h2 > a:hover {
 }
 
 #about-text {
-    color: rgb(160, 160, 160);  
+    color: rgb(160, 160, 160);
 }
 
 #about-icons {
@@ -53,10 +54,10 @@ h2 > a:hover {
     flex-flow: row nowrap;
 }
 
-#about-icons > img {
+#about-icons > a > img {
     width: 32px;
     height: 32px;
-    padding-right: 1em;
+    margin-right: 1em;
 }
 
 /*************************
@@ -72,10 +73,46 @@ h3 {
     flex-flow: row wrap;
 }
 
-#projects-icons > div {
+.project-container {
+    position: relative;
     width: 45%;
-    height: 350px;
+    height: 400px;
     margin: 1em auto;
-    background-color: red;
+    overflow: hidden;
+    background-color: rgb(150, 150, 255);
     border-radius: 1em;
+    box-shadow: 1px 1px 5px 1px rgb(20, 20, 20);
+}
+
+.project-container:hover {
+    cursor: pointer;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .5);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 0em 0em 1em 1em;
+}
+
+.project-container:hover > .project-overlay {
+    height: 20%;
+}
+
+.project-title > p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    #projects-icons > div {
+        width: 100%;
+    }
 }

@@ -3,28 +3,43 @@
 
 <head>
     <link rel="stylesheet" href="final.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.css" integrity="sha512-LSGPGnehGYGsh7/QTPRwe1VGplv3tVHmlDw6hI/hrEYaaI0OBFE2x6Pdo8DdAKIkJuYfbShXwDjq/SJxbsE9Tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/OverlayScrollbars.js" integrity="sha512-uMG6BpGUMQAQNpcKtwA2D/DYCDfMq+sU0X6uzIbN2Sl1sqG1UEew7I+eSzFAMiwC9szHX7xwhaC1XX36u02qXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.css"
+        integrity="sha512-LSGPGnehGYGsh7/QTPRwe1VGplv3tVHmlDw6hI/hrEYaaI0OBFE2x6Pdo8DdAKIkJuYfbShXwDjq/SJxbsE9Tg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/OverlayScrollbars.js"
+        integrity="sha512-uMG6BpGUMQAQNpcKtwA2D/DYCDfMq+sU0X6uzIbN2Sl1sqG1UEew7I+eSzFAMiwC9szHX7xwhaC1XX36u02qXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cade Duncan</title>
 </head>
+
 <body>
-    
+
     <div id="about-wrapper">
         <div id="about-header">
             <h1>Hi, I am Cade Duncan!</h1>
         </div>
         <div id="about-text">
-            <h2>I am an aspiring Software Engineer with a special interest in the gaming industry. I have been studying Computer Science for the past 5 years and have built up my skills through projects and classwork. Check out <a href="index.html">my resume.</a></h2>
+            <h2>I am an aspiring Software Engineer with a special interest in the gaming industry. I have been studying
+                Computer Science for the past 5 years and have built up my skills through projects and classwork. Check
+                out my <a href="index.html">resume.</a></h2>
         </div>
         <div id="about-icons">
-            <img src="https://via.placeholder.com/32" alt="Github">
-            <img src="https://via.placeholder.com/32" alt="LinkedIn">
-            <img src="https://via.placeholder.com/32" alt="Instagram">
-            <img src="https://via.placeholder.com/32" alt="YouTube">
+            <a href="https://github.com/Stingrayss"><img src="images/github.png" alt="Github"
+                    onmouseover="this.src='images/github_hover.png'" onmouseout="this.src='images/github.png'"></a>
+            <a href="https://www.linkedin.com/in/cade-duncan-profile/"><img src="images/linkedin.png" alt="LinkedIn"
+                    onmouseover="this.src='images/linkedin_hover.png'" onmouseout="this.src='images/linkedin.png'"></a>
+            <a href="https://www.instagram.com/cade_duncan/"><img src="images/instagram.png" alt="Instagram"
+                    onmouseover="this.src='images/instagram_hover.png'"
+                    onmouseout="this.src='images/instagram.png'"></a>
+            <a href="https://www.youtube.com/channel/UCcFa2E7967vYHdYSgpFMiZw"><img src="images/youtube.png"
+                    alt="YouTube" onmouseover="this.src='images/youtube_hover.png'"
+                    onmouseout="this.src='images/youtube.png'"></a>
         </div>
     </div>
 
@@ -33,12 +48,33 @@
             <h3>Projects</h3>
         </div>
         <div id="projects-icons">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="project-container">
+                <div class="project-display"></div>
+                <div class="project-overlay">
+                    <div class="project-title"><p>Stardew Valley Mods</p></div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-display"></div>
+                <div class="project-overlay">
+                    <div class="project-title"><p>Stingbot</p></div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-display"></div>
+                <div class="project-overlay">
+                    <div class="project-title"><p>Super Mario Bros in Unreal Engine 4</p></div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-display"></div>
+                <div class="project-overlay">
+                    <div class="project-title"><p>AppleCatch</p></div>
+                </div>
+            </div>
         </div>
     </div>
 
 </body>
+
 </html>
