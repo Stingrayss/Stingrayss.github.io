@@ -31,7 +31,7 @@ h2 > a:hover {
     color: rgb(50, 150, 255);
 }
 
-#about-wrapper, #projects-wrapper {
+#about-wrapper, #project-wrapper {
     display: flex;
     flex-flow: column nowrap;
     width: 65%;
@@ -68,7 +68,7 @@ h3 {
     color: white;
 }
 
-#projects-icons {
+#project-panels {
     display: flex;
     flex-flow: row wrap;
 }
@@ -111,8 +111,22 @@ h3 {
     text-align: center;
 }
 
+.project-description {
+    display: flex;
+    flex-flow: column;
+    width: inherit;
+    position: absolute;
+    background: rgb(150, 150, 255);
+    box-shadow: 1px 1px 5px 1px rgb(20, 20, 20);
+    border-radius: 1em 1em 0em 0em;
+    transition: .5s ease;
+    overflow-y: hidden;
+    margin-top: 100px;
+    z-index: -2;
+}
+
 @media screen and (max-width: 900px) {
-    #projects-icons > div {
+    #project-panels > div {
         width: 100%;
     }
 }
