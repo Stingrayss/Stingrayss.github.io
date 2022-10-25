@@ -93,33 +93,27 @@ h3 {
     cursor: pointer;
 }
 
-#stardew-container {
-    /* Stardew Valley promotional image. Source: https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm. Image content is a trademark and copyright of ConcernedApe */
-    background-image: url(images/stardew.png); 
+#stardew-container, #stingbot-container, #mario-container, #apple-container {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#stardew-container {
+    /* Stardew Valley promotional image. Source: https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm. Image content is a trademark and copyright of ConcernedApe */
+    background-image: url(images/stardew.png); 
 }
 
 #stingbot-container {
     background-image: url(images/stingbot.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 #mario-container {
     background-image: url(images/mario.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 #apple-container {
     background-image: url(images/apple.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .panel-overlay {
