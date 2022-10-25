@@ -7,3 +7,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
   $(document).ready(function () { $('body').hide().fadeIn(1500).delay(10000)});
 });
+
+function height(id) {
+  document.getElementById(id).style.height = "100%";
+}
+
+function unheight(id) {
+  document.getElementById(id).style.height = "0";
+}
+
+var containers = document.getElementsByClassName('project-container');
+
+var closeButtons = document.getElementsByClassName('close-button');
+
+var overlayCheck = false;
+
+//separates each panel for their respective overlays
+for(var i = 0; i < containers.length; i++) {
+  containers[i].addEventListener('click', function(element) {
+    var idString = element.srcElement.id;
+    idString = idString.replace('-container', '');
+    if(!overlayCheck) {
+      height(idString);
+      overlayCheck = true
+    };
+  }, false);
+}
+
+//separates each close button for their respective overlays
+for(var i = 0; i < closeButtons.length; i++) {
+  closeButtons[i].addEventListener('click', function(element) {
+    var idString = element.srcElement.id;
+    idString = idString.replace('Close', '');
+    unheight(idString);
+    if(overlayCheck) overlayCheck = false;
+  }, false);
+}
