@@ -14,6 +14,7 @@ function height(id) {
 
 function unheight(id) {
   document.getElementById(id).style.height = "0";
+  document.getElementById('creditButton').style.visibility = "visible";
 }
 
 var containers = document.getElementsByClassName('project-container');
@@ -21,6 +22,15 @@ var containers = document.getElementsByClassName('project-container');
 var closeButtons = document.getElementsByClassName('close-button');
 
 var overlayCheck = false;
+
+
+document.getElementById('creditButton').addEventListener('click', function(element) {
+  if(!overlayCheck) {
+    height('credits');
+    document.getElementById('creditButton').style.visibility = "hidden";
+    overlayCheck = true
+  };
+});
 
 //separates each panel for their respective overlays
 for(var i = 0; i < containers.length; i++) {

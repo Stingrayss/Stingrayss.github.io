@@ -1,7 +1,3 @@
-/*************
-   Elements
-*************/
-
 html {
     min-height: 100%;
 }
@@ -18,6 +14,24 @@ body {
 /**********************
      about-wrapper
 **********************/
+
+#credit-row {
+    display: flex;
+    justify-content: right;
+    color: white;
+    font-size: 2em;
+    margin-right: 2em;
+    margin-bottom: 0;
+}
+
+#creditButton:hover {
+    cursor: pointer;
+    color: rgb(50, 150, 255);
+}
+
+#credits {
+    z-index: 2;
+}
 
 h2 {
     font-size: 1.20em;
@@ -194,7 +208,46 @@ span:hover {
     color: white;
 }
 
+/*************************
+     overlay-wrapper
+*************************/
+
+.overlay-header {
+    display: flex;
+    flex-flow: column wrap;
+    line-height: 0px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.overlay-header > h3 {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.overlay-subheader {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.overlay-subheader > h4 {
+    color: rgb(180, 180, 180);
+    font-size: 2em;
+}
+
+.overlay-subheader > img {
+    width: 32px;
+    height: 32px;
+    margin-left: 1em;
+}
+
 @media screen and (max-width: 1200px) {
+    #creditButton {
+        width: 100%;
+        justify-content: center;
+    }
+    
     #about-wrapper, #about-icons {
         text-align: center;
         justify-content: center;
