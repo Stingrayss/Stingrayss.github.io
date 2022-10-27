@@ -15,39 +15,6 @@ body {
      about-wrapper
 **********************/
 
-#credit-row {
-    display: flex;
-    justify-content: right;
-    color: white;
-    font-size: 2em;
-    margin-right: 2em;
-    margin-bottom: 0;
-}
-
-#creditButton:hover {
-    cursor: pointer;
-    color: rgb(50, 150, 255);
-}
-
-#credits {
-    z-index: 2;
-}
-
-#stardewImage {
-    background-image: url(images/stardew.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vh;
-    margin-top: 3em;
-}
-
-#creditsCaption {
-    margin-top: 1em;
-    text-align: center;
-}
-
 h2 {
     font-size: 1.20em;
 }
@@ -65,7 +32,7 @@ h2 > a:hover {
     flex-flow: column nowrap;
     width: 65%;
     margin: 0 auto;
-    margin-top: 7em;
+    margin-top: 5em;
     transition: .5s ease;
 }
 
@@ -79,14 +46,13 @@ h2 > a:hover {
     color: rgb(160, 160, 160);
 }
 
-#about-icons {
-    display: flex;
-    flex-flow: row nowrap;
+#about-icons > a {
+    text-decoration: none;
 }
 
 #about-icons > a > img {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     margin-right: 1em;
 }
 
@@ -142,7 +108,7 @@ h3 {
 }
 
 #apple-container {
-    background-image: url(images/apple.png);
+    background-image: url(images/applecatch.png);
 }
 
 .panel-overlay {
@@ -178,7 +144,27 @@ figcaption > a {
 
 #stardew-container > div > div {
     line-height: 20px;
-    margin-top: -.7em;
+}
+
+/*************************
+     overlay-wrapper
+*************************/
+
+button {
+    background: none;
+    border: none;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    text-align: left;
+}
+
+span {
+    font-size: 4em;
+}
+
+span:hover {
+    color: white;
+    cursor: pointer;
 }
 
 .project-title > p {
@@ -189,7 +175,7 @@ figcaption > a {
 .project-overlay {
     display: flex;
     flex-flow: column;
-    position: fixed;
+    position: fixed!important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -198,37 +184,11 @@ figcaption > a {
     height: 0;
     transition: 1s ease;
     border-radius: 1em 1em 0em 0em;
-    overflow-x: hidden;
-    overflow-y: scroll;
     width: 65%;
     margin: 0 auto;
 }
 
-button {
-    background: none;
-    border: none;
-    margin-top: 1.5em;
-    margin-left: 2.5em;
-    text-align: left;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-span {
-    font-size: 4em;
-}
-
-span:hover {
-    color: white;
-}
-
-/*************************
-     overlay-wrapper
-*************************/
-
-.overlay-header {
+.project-header {
     display: flex;
     flex-flow: column wrap;
     line-height: 0px;
@@ -236,30 +196,125 @@ span:hover {
     margin: 0 auto;
 }
 
-.overlay-header > h3 {
+.project-header > h3 {
     font-size: 3em;
     margin-bottom: 5px;
 }
 
-.overlay-subheader {
+.project-subheader {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.overlay-subheader > h4 {
+.project-subheader > h4 {
     color: rgb(180, 180, 180);
     font-size: 2em;
 }
 
-.overlay-subheader > img {
+.project-languages {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.project-languages > img {
     width: 32px;
     height: 32px;
+    margin-top: -1em;
+}
+
+.project-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 85%;
+    transition: 1s ease;
+    margin-top: 3em;
+}
+
+/**********************
+    credits-wrapper
+**********************/
+
+#credit-row {
+    display: flex;
+    justify-content: right;
+    color: white;
+    font-size: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 0;
+}
+
+#credit-button {
+    transition: opacity .5s ease;
+}
+
+#credit-button:hover {
+    cursor: pointer;
+    color: rgb(50, 150, 255);
+}
+
+#credits {
+    z-index: 2;
+}
+
+#credit-images > figure > img {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#image-credit {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+#mario-caption {
+    text-align: center;
+}
+
+#icon-credit > div > div > img {
+    height: 32px;
+    width: 32px;
+}
+
+#icon-credit {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-column {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1em;
+    margin-bottom: -2em;
+}
+
+.icon-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 1em;
+    color: white;
+}
+
+.icon-row > p {
     margin-left: 1em;
 }
 
+.icon-row > p > a {
+    color: rgb(50, 150, 255);
+}
+
 @media screen and (max-width: 1200px) {
-    #creditButton {
+    #credit-row {
         width: 100%;
         justify-content: center;
     }
@@ -267,6 +322,14 @@ span:hover {
     #about-wrapper, #about-icons {
         text-align: center;
         justify-content: center;
+    }
+
+    .project-overlay {
+        width: 85%;
+    }
+
+    .project-content {
+        width: 90%;
     }
 
     #project-header {
@@ -284,7 +347,11 @@ span:hover {
         width: 80%;
     }
 
-    #project-descriptions > #stardew, #stingbot, #mario, #apple {
+    .project-overlay {
+        width: 100%;
+    }
+
+    .project-content {
         width: 100%;
     }
 

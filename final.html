@@ -6,7 +6,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.css"
         integrity="sha512-LSGPGnehGYGsh7/QTPRwe1VGplv3tVHmlDw6hI/hrEYaaI0OBFE2x6Pdo8DdAKIkJuYfbShXwDjq/SJxbsE9Tg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/OverlayScrollbars.js"
         integrity="sha512-uMG6BpGUMQAQNpcKtwA2D/DYCDfMq+sU0X6uzIbN2Sl1sqG1UEew7I+eSzFAMiwC9szHX7xwhaC1XX36u02qXg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -20,28 +20,78 @@
 
 <body>
 
+    <!---Credits--->
+
     <div id="credit-row">
-        <h2 id="creditButton">Credits</h2>
+        <h2 id="credit-button">Credits</h2>
     </div>
     <div class="project-overlay" id="credits">
         <button class="close-button" aria-label="Close alert" type="button">
-            <span aria-hidden="true" id="creditsClose">&times;</span>
+            <span aria-hidden="true" id="credits-close">&times;</span>
         </button>
-        <div class="overlay-header">
+        <div class="project-header">
             <h3><b>Credits</b></h3>
-            <div id="stardewCredit">
-                <div id="stardewImage"></div>
-                <figcaption id="creditsCaption"> <a
-                        href="https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm">Image content</a> is a
-                    trademark and copyright of <a href="https://www.stardewvalley.net/press/#press_team">ConcernedApe</a>
+        </div>
+        <div class="project-content">
+            <div id="credit-images">
+            <figure id="image-credit">
+                <img src="images/stardew.png" alt="Promotional Stardew Valley image" id="stardew-image">
+                <figcaption id="stardew-caption">
+                    Image from <a href="https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm">www.xbox.com</a>
+                    is a trademark and copyright of <a href="https://www.stardewvalley.net/press/#press_team">ConcernedApe</a>
                 </figcaption>
-            </div>
-            <div id="iconCredit">
-                <div id="githubIcon"></div>
+            </figure>
+            <figure class="image-credit">
+                <img src="images/mario_title.png" alt="Super Mario Bros. (NES) title">
+                <figcaption id="mario-caption">
+                    Image from <a href="https://vulgarknight.com/super-mario-bros/">Vulgarknight.com</a>
+                    is a trademark and copyright of <a href="https://www.nintendo.com/">Nintendo</a>
+                </figcaption>
+            </figure>
+        </div>
+            <div id="icon-credit">
+                <div class="icon-column">
+                    <div class="icon-row">
+                        <img src="images/github.png" alt="Github">
+                        <p>Icon made by <a href="https://www.iconfinder.com/bombasticon">Bombasticon</a> from <a href="https://www.iconfinder.com/">www.iconfinder.com/</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/linkedin.png" alt="LinkedIn">
+                        <p>Icon made by <a href="https://www.iconfinder.com/limyeanfen">Nicky Lim</a> from <a href="https://www.iconfinder.com/">www.iconfinder.com/</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/c-sharp.png" alt="c-sharp">
+                        <p>Icon made by <a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/python.png" alt="Python">
+                        <p>Icon made by <a href="https://www.freepik.com/author/flatart">Flatart</a> from <a href="https://www.iconfinder.com/">www.iconfinder.com/</a></p>
+                    </div>
+                </div>
+                <div class="icon-column">
+                    <div class="icon-row">
+                        <img src="images/instagram.png" alt="Instagram">
+                        <p>Icon made by <a href="https://www.iconfinder.com/Picons">Picons</a> from <a href="https://www.iconfinder.com/">www.iconfinder.com/</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/youtube.png" alt="Youtube">
+                        <p>Icon made by <a href="https://www.iconfinder.com/search/icons?family=evericons">Ever
+                            Icons</a> from <a href="https://www.iconfinder.com/">www.iconfinder.com/</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/c++.png" alt="c-sharp">
+                        <p>Icon made by <a href="https://www.flaticon.com/free-icons/coding" title="coding icons">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/unreal_engine.png" alt="Python">
+                        <p>Icon made by <a href="https://www.iconfinder.com/iconsets/various-icons-2">Özgür Görgülü</a> from <a href="https://www.iconfinder.com/">www.iconfinder.com/</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+
+    <!---About--->
 
     <div id="about-wrapper">
         <div id="about-header">
@@ -53,19 +103,31 @@
                 out my <a href="index.html">resume.</a></h2>
         </div>
         <div id="about-icons">
-            <a href="https://github.com/Stingrayss"><img src="images/github.png" alt="Github"
-                    onmouseover="this.src='images/github_hover.png'" onmouseout="this.src='images/github.png'"></a>
-            <a href="https://www.linkedin.com/in/cade-duncan-profile/"><img src="images/linkedin.png" alt="LinkedIn"
-                    onmouseover="this.src='images/linkedin_hover.png'" onmouseout="this.src='images/linkedin.png'"></a>
-            <a href="https://www.instagram.com/cade_duncan/"><img src="images/instagram.png" alt="Instagram"
-                    onmouseover="this.src='images/instagram_hover.png'"
-                    onmouseout="this.src='images/instagram.png'"></a>
-            <a href="https://www.youtube.com/channel/UCcFa2E7967vYHdYSgpFMiZw"><img src="images/youtube.png"
-                    alt="YouTube" onmouseover="this.src='images/youtube_hover.png'"
-                    onmouseout="this.src='images/youtube.png'"></a>
+            <a href="https://github.com/Stingrayss" 
+                onmouseover="this.children[0].src='images/github_hover.png'"
+                onmouseout="this.children[0].src='images/github.png'">
+                <img src="images/github.png" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/cade-duncan-profile/"
+                onmouseover="this.children[0].src='images/linkedin_hover.png'"
+                onmouseout="this.children[0].src='images/linkedin.png'">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/cade_duncan/"
+                onmouseover="this.children[0].src='images/instagram_hover.png'"
+                onmouseout="this.children[0].src='images/instagram.png'">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/channel/UCcFa2E7967vYHdYSgpFMiZw"
+                onmouseover="this.children[0].src='images/youtube_hover.png'"
+                onmouseout="this.children[0].src='images/youtube.png'">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
         </div>
     </div>
 
+    <!---Projects--->
+    
     <div id="project-wrapper">
         <div id="project-header">
             <h3>Projects</h3>
@@ -75,73 +137,97 @@
                 <div class="panel-overlay">
                     <div class="project-title">
                         <p>Stardew Valley Mods</p>
-                        <figcaption> <a href="https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm">Image content</a> is a trademark and copyright of <a href="https://www.stardewvalley.net/press/#press_team">ConcernedApe</a></figcaption>
+                        <figure>
+                            <figcaption>
+                                <a href="https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm">Image
+                                    content</a> is a trademark and copyright of <a
+                                    href="https://www.stardewvalley.net/press/#press_team">ConcernedApe</a>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
             <div class="project-container" id="stingbot-container">
                 <div class="panel-overlay">
-                    <div class="project-title"><p>Stingbot</p></div>
+                    <div class="project-title">
+                        <p>Stingbot</p>
+                    </div>
                 </div>
             </div>
             <div class="project-container" id="mario-container">
                 <div class="panel-overlay">
-                    <div class="project-title"><p>Super Mario Bros in Unreal Engine 4</p></div>
+                    <div class="project-title">
+                        <p>Super Mario Bros. 1-1</p>
+                    </div>
                 </div>
             </div>
             <div class="project-container" id="apple-container">
                 <div class="panel-overlay">
-                    <div class="project-title"><p>AppleCatch</p></div>
+                    <div class="project-title">
+                        <p>AppleCatch</p>
+                    </div>
                 </div>
             </div>
             <div id="project-descriptions">
                 <div class="project-overlay" id="stardew">
                     <button class="close-button" aria-label="Close alert" type="button">
-                        <span aria-hidden="true" id="stardewClose">&times;</span>
+                        <span aria-hidden="true" id="stardew-close">&times;</span>
                     </button>
-                    <div class="overlay-header">
+                    <div class="project-header">
                         <h3><b>Stardew Valley Mods</b></h3>
-                        <div class="overlay-subheader">
-                            <h4>2021, </h4><img src="images/c-sharp.png" alt="c-sharp icon">
+                        <div class="project-subheader">
+                            <h4>2021, Completed</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/c-sharp.png" alt="c-sharp icon">
                         </div>
                     </div>
                 </div>
                 <div class="project-overlay" id="stingbot">
                     <button class="close-button" aria-label="Close alert" type="button">
-                        <span aria-hidden="true" id="stingbotClose">&times;</span>
+                        <span aria-hidden="true" id="stingbot-close">&times;</span>
                     </button>
-                    <div class="overlay-header">
+                    <div class="project-header">
                         <h3><b>Stingbot</b></h3>
-                        <div class="overlay-subheader">
-                            <h4>2022, </h4><img src="images/c-sharp.png" alt="c-sharp icon">
+                        <div class="project-subheader">
+                            <h4>2022, In Progress</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/python.png" alt="c-sharp icon">
                         </div>
                     </div>
                 </div>
                 <div class="project-overlay" id="mario">
                     <button class="close-button" aria-label="Close alert" type="button">
-                        <span aria-hidden="true" id="marioClose">&times;</span>
+                        <span aria-hidden="true" id="mario-close">&times;</span>
                     </button>
-                    <div class="overlay-header">
-                        <h3><b>Super Mario Bros. (NES) 1-1 in Unreal Engine 4</b></h3>
-                        <div class="overlay-subheader">
-                            <h4>2021, </h4><img src="images/c-sharp.png" alt="c-sharp icon">
+                    <div class="project-header">
+                        <h3><b>Super Mario Bros. (NES) 1-1</b></h3>
+                        <div class="project-subheader">
+                            <h4>2021, Completed</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/unreal_engine.png" alt="c-sharp icon">
                         </div>
                     </div>
                 </div>
                 <div class="project-overlay" id="apple">
                     <button class="close-button" aria-label="Close alert" type="button">
-                        <span aria-hidden="true" id="appleClose">&times;</span>
+                        <span aria-hidden="true" id="apple-close">&times;</span>
                     </button>
-                    <div class="overlay-header">
+                    <div class="project-header">
                         <h3><b>AppleCatch</b></h3>
-                        <div class="overlay-subheader">
-                            <h4>2021, </h4><img src="images/c-sharp.png" alt="c-sharp icon">
+                        <div class="project-subheader">
+                            <h4>2021, Completed</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/c++.png" alt="c-sharp icon">
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
 
 </body>
 
