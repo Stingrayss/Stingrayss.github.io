@@ -33,6 +33,21 @@ body {
     z-index: 2;
 }
 
+#stardewImage {
+    background-image: url(images/stardew.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    margin-top: 3em;
+}
+
+#creditsCaption {
+    margin-top: 1em;
+    text-align: center;
+}
+
 h2 {
     font-size: 1.20em;
 }
@@ -183,7 +198,8 @@ figcaption > a {
     height: 0;
     transition: 1s ease;
     border-radius: 1em 1em 0em 0em;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 65%;
     margin: 0 auto;
 }
