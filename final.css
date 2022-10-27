@@ -46,14 +46,22 @@ h2 > a:hover {
     color: rgb(160, 160, 160);
 }
 
-#about-icons > a {
+.icon > a {
     text-decoration: none;
 }
 
-#about-icons > a > img {
+.icon {
+    margin-right: 1em;
+}
+
+#about-icons {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.icon > a > img {
     width: 30px;
     height: 30px;
-    margin-right: 1em;
 }
 
 /*************************
