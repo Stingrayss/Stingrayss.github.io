@@ -1,57 +1,507 @@
-/*************
-   Elements
-*************/
+html {
+    min-height: 100%;
+}
 
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    background: linear-gradient(rgb(40, 40, 40) 30%, rgb(20, 20, 20)) no-repeat;
+    background-attachment: fixed;
+    line-height: 50px;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    font-size: xx-large;
-    color: white;
-    font-size: 2.5em;
-    -webkit-text-stroke: 2px black;
-}
+/**********************
+     about-wrapper
+**********************/
 
 h2 {
-    font-size: 2em;
+    font-size: 1.20em;
 }
 
-a {
-    font-size: 2em;
-    text-decoration: none;
-    color: cyan;
-    -webkit-text-stroke: 1px black;
+h2 > a {
+    color: white;
 }
 
-a:hover {
-    color: red;
+h2 > a:hover {
+    color: rgb(50, 150, 255);
 }
 
-ul {
-    list-style: none;
-}
-
-/*************
-   Classes
-*************/
-
-.inspiration {
+#about-wrapper, #project-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 65%;
     margin: 0 auto;
+    margin-top: 5em;
+    transition: .5s ease;
+}
+
+#about-header {
+    color: white;
+    font-size: 1.75em;
+    margin-bottom: -1em;
+}
+
+#about-text {
+    color: rgb(160, 160, 160);
+}
+
+.icon > a {
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 1em;
+}
+
+#about-icons {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.icon > a > img {
+    width: 30px;
+    height: 30px;
+}
+
+/*************************
+     projects-wrapper
+*************************/
+
+h3 {
+    color: white;
+}
+
+#project-panels {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#project-panels > div {
+    transition: 1s ease;
+}
+
+.project-container {
+    position: relative;
+    width: 45%;
+    height: 450px;
+    margin: 1em auto;
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: 1px 1px 5px 1px rgb(20, 20, 20);
+}
+
+.project-container:hover {
+    cursor: pointer;
+}
+
+#stardew-container, #stingbot-container, #mario-container, #apple-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#stardew-container {
+    /* Stardew Valley promotional image. Source: https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm. Image content is a trademark and copyright of ConcernedApe */
+    background-image: url(images/stardew.png); 
+}
+
+#stingbot-container {
+    background-image: url(images/stingbot.png);
+}
+
+#mario-container {
+    background-image: url(images/mario.png);
+}
+
+#apple-container {
+    background-image: url(images/applecatch.png);
+}
+
+.panel-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .5);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 0em 0em 1em 1em;
+    text-align: center;
+}
+
+.project-container:hover > .panel-overlay {
+    height: 20%;
+}
+
+figcaption {
+    color: white;
+    font-size: .6em;
+}
+
+#stardew-panel-figcaption {
+    margin-top: -1em;
+}
+
+figcaption > a {
+    color: rgb(50, 150, 255);
+}
+
+#stardew-container > div > div {
+    line-height: 20px;
+}
+
+/*************************
+     overlay-wrapper
+*************************/
+
+button {
+    background: none;
+    border: none;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    text-align: left;
+}
+
+span {
+    font-size: 4em;
+}
+
+span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.project-title > p {
+    color: white;
+    font-size: 20px;
+}
+
+.project-overlay {
+    display: flex;
+    flex-flow: column;
+    position: fixed!important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-linear-gradient(rgb(80, 80, 80) 30%, rgb(40, 40, 40));
+    box-shadow: 1px 1px 5px 1px rgb(20, 20, 20);
+    height: 0;
+    transition: 1s ease;
+    border-radius: 1em 1em 0em 0em;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.project-header {
+    display: flex;
+    flex-flow: column wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-header > h3 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.project-subheader, .project-subheader2 {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.project-subheader2 {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.project-subheader > h4 {
+    color: rgb(180, 180, 180);
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.project-languages {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.project-languages > img {
+    width: 32px;
+    height: 32px;
+    margin-top: -1em;
+    margin-right: .5em;
+}
+
+.project-content {
+    display: flex;
+    flex-flow: column wrap;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 2em;
+    transition: 1s ease;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.project-paragraphs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: -1em;
+}
+
+.project-paragraphs > p {
+    width: 85%;
+    color: rgb(180, 180, 180);
+    font-weight: 600;
+    margin: 2em auto;
+
+}
+
+.project-paragraphs > p > a {
+    color: white;
+    font-size: 1.25em;
+}
+
+p > a:hover {
+    color: rgb(50, 150, 255);
+}
+
+.project-paragraphs > img {
+    max-width: 85%;
+    height: auto;
+    margin: auto;
+    margin-bottom: -.75em;
+}
+
+.project-embed {
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 85%;
+    height: 55vh;
+    z-index: 1;
+}
+
+.cover-spin {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 0;
+    width: 100%;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+.cover-spin::after {
+    content: '';
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: white;
+    border-top-color: transparent;
+    border-width: 4px;
+    border-radius: 50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+/**********************
+    credits-wrapper
+**********************/
+
+#credit-row {
+    display: flex;
+    justify-content: right;
+    color: white;
+    font-size: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 0;
+}
+
+#credit-button {
+    transition: opacity .5s ease;
+}
+
+#credit-button:hover {
+    cursor: pointer;
+    color: rgb(50, 150, 255);
+}
+
+#credits {
+    z-index: 2;
+}
+
+#project-content-credits {
+    width: 85%;
+}
+
+#image-carousel > img, .image-credit > img {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+#image-carousel::-webkit-scrollbar {
+    height: 7px;
+}
+
+#image-carousel::-webkit-scrollbar-thumb {
+    background-color: rgb(168, 168, 168);
+    border-radius: 6px;
+    transition: background-color .3s;
+}
+
+#image-carousel::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+#image-carousel::-webkit-scrollbar-thumb:active {
+    background-color: rgb(214, 214, 214);
+}
+
+#image-carousel {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+}
+
+#image-credit {
+    display: flex;
     flex-flow: column wrap;
-    background-image: -webkit-linear-gradient(rgb(20,20,20), rgb(40,40,40));
-    height: 100vh;
     text-align: center;
 }
 
-.inspiration > ul {
+#mario-caption {
     text-align: center;
+}
+
+#icon-credit > div > div > img {
+    height: 32px;
+    width: 32px;
+}
+
+#icon-credit {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-column {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1em;
+    margin-bottom: -2em;
+}
+
+.icon-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 1em;
+    color: white;
+}
+
+.icon-row > p {
+    margin-left: 1em;
+}
+
+.icon-row > p > a {
+    color: rgb(50, 150, 255);
+}
+
+@media screen and (max-width: 1200px) {
+    #credit-row {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #about-wrapper, #about-icons {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .project-overlay {
+        width: 85%;
+        text-align: center;
+    }
+
+    .project-content {
+        width: 90%;
+    }
+
+    .project-header {
+        align-items: center;
+    }
+
+    #project-panels > div {
+        width: 100%;
+    }
+
+    .project-paragraphs > p {
+        width: 90%;
+    }
+
+    .project-paragraphs > p > a::after {
+        content:"\a";
+        white-space: pre;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    #about-wrapper, #project-wrapper {
+        width: 80%;
+    }
+
+    .project-overlay, .project-content {
+        width: 100%;
+    }
+
+    #project-content-credits {
+        width: 100%;
+    }
+
+    .project-container:hover > .panel-overlay {
+        height: 30%;
+    }
 }

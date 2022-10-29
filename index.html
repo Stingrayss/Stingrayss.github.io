@@ -3,31 +3,349 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.css" integrity="sha512-LSGPGnehGYGsh7/QTPRwe1VGplv3tVHmlDw6hI/hrEYaaI0OBFE2x6Pdo8DdAKIkJuYfbShXwDjq/SJxbsE9Tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/OverlayScrollbars.js" integrity="sha512-uMG6BpGUMQAQNpcKtwA2D/DYCDfMq+sU0X6uzIbN2Sl1sqG1UEew7I+eSzFAMiwC9szHX7xwhaC1XX36u02qXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--- OverlayScrollbars library: https://github.com/KingSora/OverlayScrollbars --->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.css"
+        integrity="sha512-LSGPGnehGYGsh7/QTPRwe1VGplv3tVHmlDw6hI/hrEYaaI0OBFE2x6Pdo8DdAKIkJuYfbShXwDjq/SJxbsE9Tg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/OverlayScrollbars.js"
+        integrity="sha512-uMG6BpGUMQAQNpcKtwA2D/DYCDfMq+sU0X6uzIbN2Sl1sqG1UEew7I+eSzFAMiwC9szHX7xwhaC1XX36u02qXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio 2.0</title>
+    <title>Cade Duncan</title>
 </head>
 
 <body>
 
-    <div class="inspiration">
-        <ul>
-            <h2><a href="https://onepagelove.com/inspiration/portfolio">Inspiration</a></h2>
-            <li><a href="https://ibuildmyideas.com/?ref=onepagelove">Jordan Singer</a></li>
-            <li><a href="https://www.jordienric.com/?ref=onepagelove">Jordi Enric</a></li>
-            <li><a href="https://danielgolden.me/?ref=onepagelove">Daniel Golden</a></li>
-            <li><a href="https://www.ardakaracizmeli.com/?ref=onepagelove">Ardakaracizmeli</a></li>
-            <li><a href="https://krystonschwarze.com/?ref=onepagelove">Krystonschwarze</a></li>
-            <li><a href="https://electerious.com/?ref=onepagelove">Electerious</a></li>
-
-        </ul>
-        <br><br><br>
-        <a href="final.html">Final Website</a>
+    <!---Credits--->
+    
+    <div id="credit-row">
+        <h2 id="credit-button">Credits</h2>
+    </div>
+    <div class="project-overlay" id="credits">
+        <button class="close-button" aria-label="Close alert" type="button">
+            <span aria-hidden="true" id="credits-close">&times;</span>
+        </button>
+        <div class="project-header">
+            <h3><b>Credits</b></h3>
+        </div>
+        <div class="project-content" id="project-content-credits">
+            <div id="credit-images">
+            <figure id="image-credit">
+                <div id="image-carousel">
+                    <img src="images/stardew.png" alt="Promotional Stardew Valley image" id="stardew-image" loading="lazy">
+                    <img src="images/telephone_purchasing.png" alt="telephone purchasing gif" onmouseover="this.src = 'images/telephone_purchasing.gif'" onmouseleave="this.src = 'images/telephone_purchasing.png'" loading="lazy">
+                    <img src="images/community_center.png" alt="community center gif" onmouseover="this.src = 'images/community_center.gif'" onmouseleave="this.src = 'images/community_center.png'" loading="lazy">
+                </div>
+                <figcaption id="stardew-caption">
+                    Images from <a href="https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm">www.xbox.com</a>
+                    and in-game footage are a trademark and copyright of <a href="https://www.stardewvalley.net/press/#press_team">ConcernedApe</a>
+                </figcaption>
+            </figure>
+            <figure class="image-credit">
+                <img src="images/mario_title.png" alt="Super Mario Bros. (NES) title">
+                <figcaption id="mario-caption">
+                    Image from <a href="https://vulgarknight.com/super-mario-bros/">Vulgarknight.com</a>
+                    is a trademark and copyright of <a href="https://www.nintendo.com/">Nintendo</a>
+                </figcaption>
+            </figure>
+        </div>
+            <div id="icon-credit">
+                <div class="icon-column">
+                    <div class="icon-row">
+                        <img src="images/github.png" alt="Github">
+                        <p>Icon made by <a href="https://www.iconfinder.com/bombasticon">Bombasticon</a><br> from <a href="https://www.iconfinder.com/">www.iconfinder.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/linkedin.png" alt="LinkedIn">
+                        <p>Icon made by <a href="https://www.iconfinder.com/limyeanfen">Nicky Lim</a><br> from <a href="https://www.iconfinder.com/">www.iconfinder.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/c-sharp.png" alt="c-sharp">
+                        <p>Icon made by <a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">Freepik</a><br> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/python.png" alt="Python">
+                        <p>Icon made by <a href="https://www.freepik.com/author/flatart">Flatart</a><br> from <a href="https://www.iconfinder.com/">www.iconfinder.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/pufferchick.png" alt="sfml icon">
+                        <p>Icon made by <a href="https://github.com/Pathoschild" title="coding icons">Pathoschild</a><br> from <a href="https://smapi.io/">smapi.io</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/sfml.png" alt="smapi icon">
+                        <p>Icon from <a href="https://www.sfml-dev.org/">sfml-dev.org</a></p>
+                    </div>
+                </div>
+                <div class="icon-column">
+                    <div class="icon-row">
+                        <img src="images/instagram.png" alt="Instagram">
+                        <p>Icon made by <a href="https://www.iconfinder.com/Picons">Picons</a><br> from <a href="https://www.iconfinder.com/">www.iconfinder.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/youtube.png" alt="Youtube">
+                        <p>Icon made by <a href="https://www.iconfinder.com/search/icons?family=evericons">Ever Icons</a><br> from <a href="https://www.iconfinder.com/">www.iconfinder.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/c++.png" alt="c-sharp">
+                        <p>Icon made by <a href="https://www.flaticon.com/free-icons/coding" title="coding icons">Freepik</a><br> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/unreal_engine.png" alt="Python">
+                        <p>Icon made by <a href="https://www.iconfinder.com/iconsets/various-icons-2">Özgür Görgülü</a><br> from <a href="https://www.iconfinder.com/">www.iconfinder.com</a></p>
+                    </div>
+                    <div class="icon-row">
+                        <img src="images/discordpy.png" alt="Discord Python">
+                        <p>Icon made by <a href="https://imgur.com/user/dinitride">Dinitride</a><br> from <a href="https://www.imgur.com/">imgur.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!---About--->
+
+    <div id="about-wrapper">
+        <div id="about-header">
+            <h1>Hi, I am Cade Duncan!</h1>
+        </div>
+        <div id="about-text">
+            <h2>I am an aspiring Software Engineer with a special interest in the gaming industry. I have been studying
+                Computer Science for the past 5 years and have built up my skills through projects and classwork. Check
+                out my <a href="resume.pdf">resume.</a></h2>
+        </div>
+        <div id="about-icons">
+            <div class="icon">
+                <a href="https://github.com/Stingrayss" 
+                    onmouseover="this.children[0].src='images/github_hover.png'"
+                    onmouseout="this.children[0].src='images/github.png'">
+                    <img src="images/github.png" alt="Github">
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/cade-duncan-profile/"
+                    onmouseover="this.children[0].src='images/linkedin_hover.png'"
+                    onmouseout="this.children[0].src='images/linkedin.png'">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/cade_duncan/"
+                    onmouseover="this.children[0].src='images/instagram_hover.png'"
+                    onmouseout="this.children[0].src='images/instagram.png'">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.youtube.com/channel/UCcFa2E7967vYHdYSgpFMiZw"
+                    onmouseover="this.children[0].src='images/youtube_hover.png'"
+                    onmouseout="this.children[0].src='images/youtube.png'">
+                    <img src="images/youtube.png" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!---Projects--->
+    
+    <div id="project-wrapper">
+        <div id="project-header">
+            <h3>Projects</h3>
+        </div>
+        <div id="project-panels">
+            <div class="project-container" id="stardew-container">
+                <div class="panel-overlay">
+                    <div class="project-title">
+                        <p>Stardew Valley Mods</p>
+                        <figure>
+                            <figcaption id="stardew-panel-figcaption">
+                                <a href="https://www.xbox.com/en-US/games/store/stardew-valley/c3d891z6tnqm">Image
+                                    content</a> is a trademark and copyright of <a
+                                    href="https://www.stardewvalley.net/press/#press_team">ConcernedApe</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="project-container" id="stingbot-container">
+                <div class="panel-overlay">
+                    <div class="project-title">
+                        <p>Stingbot</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-container" id="mario-container">
+                <div class="panel-overlay">
+                    <div class="project-title">
+                        <p>Super Mario Bros. 1-1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-container" id="apple-container">
+                <div class="panel-overlay">
+                    <div class="project-title">
+                        <p>AppleCatch</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="project-descriptions">
+                <div class="project-overlay" id="stardew">
+                    <button class="close-button" aria-label="Close alert" type="button">
+                        <span aria-hidden="true" id="stardew-close">&times;</span>
+                    </button>
+                    <div class="project-header">
+                        <h3><b>Stardew Valley Mods</b></h3>
+                        <div class="project-subheader">
+                            <h4>2021, Completed</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/c-sharp.png" alt="c-sharp icon">
+                            <img src="images/pufferchick.png" alt="smapi icon">
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-paragraphs">
+
+                            <img src="images/telephone_purchasing.png" alt="telephone purchasing gif"
+                                onmouseover="this.src = 'images/telephone_purchasing.gif'"
+                                onmouseleave="this.src = 'images/telephone_purchasing.png'" loading="lazy">
+
+                            <p>
+                                <a href="https://www.nexusmods.com/stardewvalley/mods/10190">Telephone Purchasing</a>
+                                changes the way the player can interact with the in-game phone item by allowing them to
+                                purchase items through it.
+                                Items are normally only purchasable through the in-game stores scattered through the
+                                world, with the telephone item allowing the player to browse the items being sold at
+                                these stores.
+                            </p>
+
+                            <img src="images/community_center.png" alt="community center gif"
+                                onmouseover="this.src = 'images/community_center.gif'"
+                                onmouseleave="this.src = 'images/community_center.png'" loading="lazy">
+
+                            <p><a href="https://www.nexusmods.com/stardewvalley/mods/10150">CommunityCenterAnywhere</a>
+                                changes the way the player can interact with the in-game "Community Center" menu by
+                                allowing them to insert items into the bundles.
+                                Bundles inside of this menu normally do not allow the player to place an item into their
+                                respective slots.
+                            </p>
+
+                            <p style="text-align: center;"><a href="https://github.com/Stingrayss/StardewValley">Source Code</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-overlay" id="stingbot">
+                    <button class="close-button" aria-label="Close alert" type="button">
+                        <span aria-hidden="true" id="stingbot-close">&times;</span>
+                    </button>
+                    <div class="project-header">
+                        <h3><b>Stingbot</b></h3>
+                        <div class="project-subheader">
+                            <h4>2022, In Progress</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/python.png" alt="c-sharp icon">
+                            <img src="images/discordpy.png" alt="discordpy icon">
+                        </div>
+                    </div>
+                    <div class="project-content">
+
+                        <div class="project-embed">
+                            <div class="cover-spin"></div>
+                            <iframe onload="this.parentElement.children[0].style = 'display: none;'" src="https://www.youtube.com/embed/videoseries?list=PLd0x8oNemO0gXKPx8pPf10Gq_Wy-nfhph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="console.log(document.parentElement.firstChild)"></iframe>
+                        </div>
+
+                        <div class="project-paragraphs">
+
+                            <p>
+                                <a href="https://discord.com/api/oauth2/authorize?client_id=543329883732836359&permissions=8&scope=bot">Stingbot</a>
+                                is an all-purpose discord bot that tracks various statistics of guild members that are not otherwise tracked. Using a JSON file to store the data,
+                                Stingbot is able to use the discord.py API in order to communicate to the Discord servers and relay the information back to a local or private server.
+                                Stingbot is solely in development for the remainder of 2022.
+                            </p>
+
+                            <p style="text-align: center;"><a href="https://github.com/Stingrayss/Projects/tree/main/StingBot">Source Code</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-overlay" id="mario">
+                    <button class="close-button" aria-label="Close alert" type="button">
+                        <span aria-hidden="true" id="mario-close">&times;</span>
+                    </button>
+                    <div class="project-header">
+                        <h3><b>Super Mario Bros. (NES) 1-1</b></h3>
+                        <div class="project-subheader">
+                            <h4>2021, Completed</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/unreal_engine.png" alt="c-sharp icon">
+                        </div>
+                    </div>
+                    <div class="project-content">
+
+                        <div class="project-embed">
+                            <div class="cover-spin"></div>
+                            <iframe src="https://www.youtube.com/embed/Pd23Pbdz03c" loading="lazy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="project-paragraphs">
+
+                            <p>
+                                <a href="https://www.nexusmods.com/stardewvalley/mods/10190">Super Mario Bros. (NES) 1-1</a>
+                                is a 1:1 recreation of level 1-1 from Super Mario Bros. (NES) in Unreal Engine 4. It uses
+                                Unreal Engine 4's 2D game creation template and online assets to look as faithful to the original game as possible.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-overlay" id="apple">
+                    <button class="close-button" aria-label="Close alert" type="button">
+                        <span aria-hidden="true" id="apple-close">&times;</span>
+                    </button>
+                    <div class="project-header">
+                        <h3><b>AppleCatch</b></h3>
+                        <div class="project-subheader">
+                            <h4>2021, Completed</h4>
+                        </div>
+                        <div class="project-languages">
+                            <img src="images/c++.png" alt="c-sharp icon">
+                            <img src="images/sfml.png" alt="sfml icon">
+                        </div>
+                    </div>
+                    <div class="project-content">
+
+                        <div class="project-embed">
+                            <div class="cover-spin"></div>
+                            <iframe src="https://www.youtube.com/embed/alOvQ7dVIf8?start=3633" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="project-paragraphs">
+
+                            <p><a href="https://github.com/Stingrayss/Projects/tree/main/AppleCatch">AppleCatch</a>
+                                is a game coded in C++ using the SFML library where the goal is to catch as many apples as possible without running out of lives.
+                                The game uses all unique assets (except for the background music). 
+                            </p>
+
+                            <p style="text-align: center;"><a href="https://github.com/Stingrayss/Projects/raw/main/AppleCatch/AppleCatch.zip">Download</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

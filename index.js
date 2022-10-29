@@ -1,21 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   //Create the custom scrollbars for the body and overlay content
+
+  //OverlayScrollbars library: https://github.com/KingSora/OverlayScrollbars
   OverlayScrollbars(document.querySelectorAll("body"), {
     className: "os-theme-light",
     scrollbars : {
       visibility : 'visible'
     }
   });
+  
   OverlayScrollbars(document.querySelectorAll(".project-content"), {
     className: "os-theme-light",
     scrollbars: {
-      autoHide: "move"
+      autoHide: "move",
     }
   });
 
   //Fade in all elements after loading the page
   $(document).ready(function () { $('body').hide().fadeIn(1500).delay(10000)});
+
 });
 
 //sets the body scrollbar to hidden
