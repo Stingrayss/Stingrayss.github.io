@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       autoHide: "move",
     }
   });
-
-  //Fade in all elements after loading the page
+  
 });
 
 //sets the body scrollbar to hidden

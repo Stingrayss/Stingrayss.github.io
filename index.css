@@ -9,11 +9,14 @@ body {
     background: linear-gradient(rgb(40, 40, 40) 30%, rgb(20, 20, 20)) no-repeat;
     background-attachment: fixed;
     line-height: 50px;
+    /* Fade-in animation
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    */
 }
-  
+
+/* Fade-in animation
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -22,6 +25,7 @@ body {
         opacity: 1;
      }
 }
+*/
 
 /**********************
      about-wrapper
