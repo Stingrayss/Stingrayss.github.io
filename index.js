@@ -16,6 +16,22 @@ document.addEventListener("DOMContentLoaded", function() {
       autoHide: "move",
     }
   });
+
+  var imageSources = [
+    "images/github_hover.png",
+    "images/linkedin_hover.png",
+    "images/instagram_hover.png",
+    "images/youtube_hover.png"
+  ];
+  
+  function preloadImages() {
+    for (var i = 0; i < imageSources.length; i++) {
+        var img = new Image();
+        img.src = imageSources[i];
+    }
+  }
+  
+  preloadImages();
   
 });
 
