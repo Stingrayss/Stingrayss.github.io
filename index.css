@@ -101,7 +101,7 @@ h3 {
 .project-container {
     position: relative;
     width: 45%;
-    height: 450px;
+    height: 500px;
     margin: 1em auto;
     overflow: hidden;
     border-radius: 1em;
@@ -385,7 +385,7 @@ iframe {
     width: 85%;
 }
 
-#image-carousel > img, .image-credit > img {
+#image-carousel > img, .image-credit > img, #mario-credit > img {
     display: flex;
     flex-flow: row wrap;
     max-width: 100%;
@@ -419,10 +419,11 @@ iframe {
     overflow-x: scroll;
 }
 
-#image-credit {
+.image-credit {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
+    align-items: center;
 }
 
 #mario-caption {
