@@ -52,7 +52,7 @@ h2 > a:hover {
     transition: .5s ease;
 }
 
-#about-header {
+#about-header, #projects-header {
     color: white;
     font-size: 1.75em;
     margin-bottom: -1em;
@@ -77,7 +77,6 @@ h2 > a:hover {
 
 .icon > a > img {
     width: 30px;
-    height: 30px;
 }
 
 /*************************
@@ -101,7 +100,7 @@ h3 {
 .project-container {
     position: relative;
     width: 45%;
-    height: 500px;
+    padding-top: 40%;
     margin: 1em auto;
     overflow: hidden;
     border-radius: 1em;
@@ -365,7 +364,6 @@ iframe {
     color: white;
     font-size: 1.5em;
     margin-right: 2em;
-    margin-bottom: 0;
 }
 
 #credit-button {
@@ -417,6 +415,7 @@ iframe {
     display: flex;
     flex-flow: row nowrap;
     overflow-x: scroll;
+    width: 100%;
 }
 
 .image-credit {
@@ -431,7 +430,6 @@ iframe {
 }
 
 #icon-credit > div > div > img {
-    height: 32px;
     width: 32px;
 }
 
@@ -466,38 +464,57 @@ iframe {
     color: rgb(50, 150, 255);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
+    #about-wrapper, #project-wrapper {
+        width: 80%;
+    }
+    .project-overlay {
+        width: 100%;
+    }
+
+    .project-content, #project-content-credits {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
     #credit-row {
         width: 100%;
         justify-content: center;
     }
     
-    #about-wrapper, #about-icons {
+    #about-wrapper, #project-wrapper, #about-icons {
         text-align: center;
         justify-content: center;
     }
 
-    .project-overlay {
-        width: 85%;
-        text-align: center;
+    #about-icons {
+        width: 50%;
+        margin: 0 auto;
+        justify-content: space-between;
     }
 
-    .project-content {
-        width: 90%;
+    .icon > a > img {
+        width: 35px;
+    }
+
+    #about-wrapper, #project-wrapper {
+        margin-top: 1em;
+    }
+
+    .project-overlay {
+        width: 100%;
     }
 
     .project-header {
         align-items: center;
     }
 
-    #project-panels > div {
+    .project-container {
         width: 100%;
+        padding-top: 95%;
     }
-
-    .project-paragraphs > p {
-        width: 90%;
-    }
-
+    
     .project-paragraphs > p > a::after {
         content:"\a";
         white-space: pre;
@@ -505,16 +522,12 @@ iframe {
 
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 720px) {
     #about-wrapper, #project-wrapper {
-        width: 80%;
+        width: 90%;
     }
 
-    .project-overlay, .project-content {
-        width: 100%;
-    }
-
-    #project-content-credits {
+    .project-content, #project-content-credits {
         width: 100%;
     }
 
