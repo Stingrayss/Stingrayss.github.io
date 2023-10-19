@@ -469,11 +469,7 @@ iframe {
         width: 80%;
     }
     .project-overlay {
-        width: 100%;
-    }
-
-    .project-content, #project-content-credits {
-        width: 100%;
+        width: 80%;
     }
 }
 
