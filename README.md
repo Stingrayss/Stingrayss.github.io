@@ -7,7 +7,7 @@ Welcome to my portfolio website hosted on GitHub! This is where I showcase my pr
 I'm a dedicated Software Engineer with a strong interest in gaming, blending my technical skills with my love for interactive and immersive digital experiences.
 
 - **Name**: Cade Duncan
-- **Location**: Brea, CA
+- **Location**: California
 - **Email**: cadeduncan72@gmail.com
 - [**LinkedIn**](https://www.linkedin.com/in/cade-duncan-profile/)
 
